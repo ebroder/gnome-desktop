@@ -541,12 +541,16 @@ gnome_rr_config_load_current (GnomeRRConfig *config, GError **error)
 		output->priv->product = info->product_code;
 		output->priv->serial = info->serial_number;
 		output->priv->aspect = info->aspect_ratio;
+		output->priv->width_mm = info->width_mm;
+		output->priv->height_mm = info->height_mm;
 	    }
 	    else
 	    {
 		strcpy (output->priv->vendor, "???");
 		output->priv->product = 0;
 		output->priv->serial = 0;
+		output->priv->width_mm = -1;
+		output->priv->height_mm = -1;
 	    }
 
 	    if (gnome_rr_output_is_laptop (rr_output))

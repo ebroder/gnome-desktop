@@ -67,6 +67,8 @@ struct GnomeRROutputInfoPrivate
     guint		product;
     guint		serial;
     double		aspect;
+    int			width_mm;
+    int			height_mm;
     int			pref_width;
     int			pref_height;
     char *		display_name;

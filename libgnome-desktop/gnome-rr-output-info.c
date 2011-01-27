@@ -205,6 +205,20 @@ double gnome_rr_output_info_get_aspect_ratio (GnomeRROutputInfo *self)
     return self->priv->aspect;
 }
 
+int gnome_rr_output_info_get_width_mm (GnomeRROutputInfo *self)
+{
+    g_return_val_if_fail (GNOME_IS_RR_OUTPUT_INFO (self), -1);
+
+    return self->priv->width_mm;
+}
+
+int gnome_rr_output_info_get_height_mm (GnomeRROutputInfo *self)
+{
+    g_return_val_if_fail (GNOME_IS_RR_OUTPUT_INFO (self), -1);
+
+    return self->priv->height_mm;
+}
+
 /**
  * gnome_rr_output_info_get_display_name:
  *
